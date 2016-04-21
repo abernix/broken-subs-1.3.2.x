@@ -6,4 +6,14 @@
   <h1>Welcome to Meteor Broken Subscriptions with Fast Render!</h1>
 
   Go ahead and open your console.
+
+  {{>funcentral}}
 </body>
+
+<template name="funcentral">
+  <ul>
+    {{#each allTheFun}}
+      <li>{{this.funAmount}}</li>
+    {{/each}}
+  </ul>
+</template>

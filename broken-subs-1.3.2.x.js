@@ -1,6 +1,12 @@
 const FunTimes = new Mongo.Collection('funtimes');
 
 if (Meteor.isClient) {
+  window.FunTimes = FunTimes;
+  Template.funcentral.helpers({
+    allTheFun() {
+      return FunTimes.find({});
+    },
+  })
 }
 
 if (Meteor.isServer) {
